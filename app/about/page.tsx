@@ -15,7 +15,7 @@ export default function AboutPage() {
             Somos una tienda apasionada por los videojuegos, Trading Card Games (TCG) y juegos de mesa.
           </p>
           
-          <div className="my-12 relative aspect-[16/9] bg-gray-100 overflow-hidden">
+          <div className="my-12 relative aspect-video bg-gray-100 overflow-hidden">
              <Image 
                 src="/logo.jpg" 
                 alt="POKEMAUS Store" 

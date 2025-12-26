@@ -28,7 +28,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Link href="/shop?category=box" className="group block">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
                 <Image 
                   src="https://tcgplayer-cdn.tcgplayer.com/product/501257_in_1000x1000.jpg" 
                   alt="Cajas" 
@@ -40,7 +40,7 @@ export default function Home() {
               <p className="text-sm text-gray-500 mt-1">Explora nuestra colección</p>
             </Link>
             <Link href="/shop?category=combo" className="group block">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
                 <Image 
                   src="https://tcgplayer-cdn.tcgplayer.com/product/516576_in_1000x1000.jpg" 
                   alt="Combos" 
@@ -52,7 +52,7 @@ export default function Home() {
               <p className="text-sm text-gray-500 mt-1">Los mejores paquetes</p>
             </Link>
             <Link href="/shop?category=mystery-box" className="group block">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100 mb-4">
+              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
                 <Image 
                   src="https://www.pokeperustore.pe/wp-content/uploads/2023/08/1838.jpg" 
                   alt="Cajas Misteriosas" 
