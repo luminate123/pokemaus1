@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/lib/data";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/src/components/ProductCard";
 
 export default function Home() {
   const featuredProducts = products.filter(p => p.featured);

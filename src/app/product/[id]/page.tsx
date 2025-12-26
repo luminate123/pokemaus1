@@ -4,7 +4,7 @@ import { useState, use } from 'react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products } from '@/lib/data';
-import { useCart } from '@/components/CartProvider';
+import { useCart } from '@/src/components/CartProvider';
 import { ShoppingCart, Check, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 

@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { products, Product } from '@/lib/data';
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/src/components/ProductCard';
 import { Filter, ChevronDown, X } from 'lucide-react';
 
 function ShopContent() {
