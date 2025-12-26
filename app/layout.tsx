@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://web-ktujc1odbjp1.up-de-fra1-k8s-1.apps.run-on-seenode.com/'), // TODO: Reemplaza con tu dominio real de Seenode
   title: {
     default: "POKEMAUS | Tienda Pokémon TCG",
     template: "%s | POKEMAUS"
