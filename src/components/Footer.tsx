@@ -51,16 +51,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div>
-                        <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Servicio al cliente</h3>
-                        <ul className="space-y-4">
-                            <li><Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Políticas de privacidad</Link></li>
-                            <li><Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Blog Maestro Pokémon</Link></li>
-                            <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Contactanos</Link></li>
-                            <li><Link href="/faq" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Terminos y condiciones</Link></li>
-                            <li><Link href="/my-account" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Mi Cuenta</Link></li>
-                        </ul>
-                    </div>
+
 
                     <div>
                         <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Síguenos</h3>

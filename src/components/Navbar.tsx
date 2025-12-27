@@ -76,9 +76,6 @@ export default function Navbar() {
 
             {/* Right Actions */}
             <div className="flex items-center gap-6">
-              <Link href="/login" className="hidden md:flex items-center gap-2 text-gray-500 hover:text-brand-red font-bold text-sm uppercase tracking-wide">
-                <span>Acceder</span>
-              </Link>
               
               <Link href="/cart" className="flex items-center gap-3 group">
                 <div className="relative">
@@ -159,17 +156,6 @@ export default function Navbar() {
                   <span className="text-[10px] font-bold uppercase text-gray-900">{cat.name}</span>
                 </Link>
               ))}
-            </div>
-
-            <div className="border-t border-gray-100 pt-4 mt-4">
-              <Link 
-                href="/login" 
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 font-bold text-gray-700"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <User size={20} />
-                Acceder
-              </Link>
             </div>
           </div>
         </div>
