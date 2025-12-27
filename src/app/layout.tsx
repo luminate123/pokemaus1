@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   creator: "Pokemon Center Perú",
   publisher: "Pokemon Center Perú",
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
-    apple: "/logo.svg",
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
   },
   openGraph: {
     title: "Pokemon Center Perú | Tienda Pokémon TCG",
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     siteName: "Pokemon Center Perú",
     images: [
       {
-        url: "/logo.svg",
+        url: "/logo.jpg",
         width: 800,
         height: 800,
         alt: "Pokemon Center Perú Logo",
       },
     ],
-    locale: "es_CL",
+    locale: "es_PE",
     type: "website",
   },
   twitter: {
