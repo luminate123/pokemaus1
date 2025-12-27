@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShoppingBag, Search, Menu, X, User, Sparkles, Ghost, Gamepad2, Home, Shirt, Package, Star, MoreHorizontal } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCart } from './CartProvider';
 import { useRouter, useSearchParams } from 'next/navigation';
 
@@ -13,7 +13,11 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
   const searchParams = useSearchParams();
-  const currentCategory = searchParams.get('category');
+  const [currentCategory, setCurrentCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCurrentCategory(searchParams.get('category'));
+  }, [searchParams]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

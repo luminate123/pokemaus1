@@ -12,8 +12,8 @@ function ShopContent() {
   const searchParam = searchParams.get('search');
 
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
-  const [activeCategory, setActiveCategory] = useState<string>(categoryParam || 'all');
-  const [searchQuery, setSearchQuery] = useState<string>(searchParam || '');
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [priceRange, setPriceRange] = useState<string>('all');
   const [activeExpansion, setActiveExpansion] = useState<string>('all');
   const [showFilters, setShowFilters] = useState(false);
