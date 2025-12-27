@@ -26,8 +26,8 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
           <FadeIn direction="down">
-            <div className="inline-block mb-6 animate-bounce">
-              <span className="bg-brand-red text-white px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm shadow-lg">
+            <div className="mb-6 animate-bounce px-2">
+              <span className="inline-block bg-brand-red text-white px-4 py-2 md:px-6 md:py-2 rounded-xl md:rounded-full font-bold uppercase tracking-widest text-[10px] md:text-sm shadow-lg max-w-full leading-relaxed">
                 ¡Bienvenidos a Pokemon Center Perú!
               </span>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
           </FadeIn>
           
           <FadeIn delay={0.4}>
-            <div className="bg-brand-red text-white inline-block px-8 py-3 rounded-full font-black text-xl uppercase tracking-wider shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300 mb-12">
+            <div className="bg-brand-red text-white inline-block px-4 py-2 md:px-8 md:py-3 rounded-xl md:rounded-full font-black text-sm md:text-xl uppercase tracking-wider shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300 mb-12 max-w-full mx-2">
               Exclusivo para Lima y Callao
             </div>
           </FadeIn>
