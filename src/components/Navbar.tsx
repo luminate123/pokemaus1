@@ -50,15 +50,15 @@ export default function Navbar() {
               <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden rounded-full border-2 border-gray-100 shadow-sm">
                 <Image 
                   src="/logo.jpg" 
-                  alt="Pokemon Center Perú Logo" 
+                  alt="Poke Store Logo" 
                   fill 
                   className="object-cover"
                   priority
                 />
               </div>
               <div className="flex flex-col -space-y-1 hidden sm:flex">
-                <span className="text-xl font-black text-gray-900 tracking-tighter leading-none group-hover:text-brand-red transition-colors">POKEMON</span>
-                <span className="text-xl font-black text-gray-900 tracking-tighter leading-none">CENTER PERÚ</span>
+                <span className="text-xl font-black text-gray-900 tracking-tighter leading-none group-hover:text-brand-red transition-colors">POKE</span>
+                <span className="text-xl font-black text-gray-900 tracking-tighter leading-none">STORE</span>
               </div>
             </Link>
 

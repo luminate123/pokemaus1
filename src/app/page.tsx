@@ -10,17 +10,17 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[600px] flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+      <section className="relative overflow-hidden min-h-[400px] md:min-h-[600px] flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/Hero.png"
             alt="Hero Background"
             fill
-            className="object-cover opacity-80"
+            className="object-cover object-center opacity-60 md:opacity-80"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
+          <div className="absolute inset-0 bg-white/70 md:bg-gradient-to-r md:from-white/80 md:via-white/40 md:to-transparent" />
         </div>
 
         {/* Content */}
@@ -28,15 +28,15 @@ export default function Home() {
           <FadeIn direction="down">
             <div className="mb-6 animate-bounce px-2">
               <span className="inline-block bg-brand-red text-white px-4 py-2 md:px-6 md:py-2 rounded-xl md:rounded-full font-bold uppercase tracking-widest text-[10px] md:text-sm shadow-lg max-w-full leading-relaxed">
-                ¡Bienvenidos a Pokemon Center Perú!
+                ¡Bienvenidos a Poke Store!
               </span>
             </div>
           </FadeIn>
           
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight drop-shadow-sm">
+            <h1 className="text-2xl sm:text-4xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight drop-shadow-sm relative z-10">
               REALIZAMOS ENVÍOS
-              <span className="block text-brand-yellow text-stroke-red drop-shadow-md mt-2">EL MISMO DÍA</span>
+              <span className="block text-brand-yellow text-stroke-red drop-shadow-md mt-2 text-xl sm:text-3xl md:text-7xl">EL MISMO DÍA</span>
             </h1>
           </FadeIn>
           
@@ -76,7 +76,7 @@ export default function Home() {
           <FadeIn direction="left">
             <div className="flex items-center gap-4 mb-8">
               <div className="h-px flex-1 bg-gray-200"></div>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">PREVENTAS EN POKEMON CENTER PERÚ</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">PREVENTAS EN POKE STORE</h2>
               <div className="h-px flex-1 bg-gray-200"></div>
             </div>
           </FadeIn>
@@ -118,7 +118,7 @@ export default function Home() {
           <FadeIn direction="left">
             <div className="flex items-center gap-4 mb-8">
               <div className="h-px flex-1 bg-gray-200"></div>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">NOVEDADES EN POKEMON CENTER PERÚ</h2>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">NOVEDADES EN POKE STORE</h2>
               <div className="h-px flex-1 bg-gray-200"></div>
             </div>
           </FadeIn>

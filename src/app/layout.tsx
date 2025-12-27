@@ -19,29 +19,29 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://web-ktujc1odbjp1.up-de-fra1-k8s-1.apps.run-on-seenode.com/'), // TODO: Reemplaza con tu dominio real de Seenode
   title: {
-    default: "Pokemon Center Perú | Tienda Pokémon TCG",
-    template: "%s | Pokemon Center Perú"
+    default: "Poke Store | Tienda Pokémon TCG",
+    template: "%s | Poke Store"
   },
   description: "Tu destino definitivo para Pokémon TCG. Encuentra Cajas de Entrenador Élite, Boosters, Mystery Boxes y cartas sueltas al mejor precio.",
-  keywords: ["Pokemon TCG", "Cartas Pokemon", "Pokemon Chile", "Booster Box", "Elite Trainer Box", "Mystery Box", "Pokemon Center Perú", "TCG Store"],
-  authors: [{ name: "Pokemon Center Perú" }],
-  creator: "Pokemon Center Perú",
-  publisher: "Pokemon Center Perú",
+  keywords: ["Pokemon TCG", "Cartas Pokemon", "Pokemon Chile", "Booster Box", "Elite Trainer Box", "Mystery Box", "Poke Store", "TCG Store"],
+  authors: [{ name: "Poke Store" }],
+  creator: "Poke Store",
+  publisher: "Poke Store",
   icons: {
     icon: "/logo.jpg",
     shortcut: "/logo.jpg",
     apple: "/logo.jpg",
   },
   openGraph: {
-    title: "Pokemon Center Perú | Tienda Pokémon TCG",
+    title: "Poke Store | Tienda Pokémon TCG",
     description: "Tu destino definitivo para Pokémon TCG. Coleccionables, cajas y cartas sueltas para verdaderos entrenadores.",
-    siteName: "Pokemon Center Perú",
+    siteName: "Poke Store",
     images: [
       {
         url: "/logo.jpg",
         width: 800,
         height: 800,
-        alt: "Pokemon Center Perú Logo",
+        alt: "Poke Store Logo",
       },
     ],
     locale: "es_PE",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pokemon Center Perú | Tienda Pokémon TCG",
+    title: "Poke Store | Tienda Pokémon TCG",
     description: "Tu destino definitivo para Pokémon TCG. Coleccionables, cajas y cartas sueltas.",
     images: ["/logo.jpg"],
   },

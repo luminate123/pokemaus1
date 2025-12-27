@@ -28,12 +28,12 @@ export default function Footer() {
                             <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-white/20 group-hover:border-brand-red transition-colors">
                                 <Image
                                     src="/logo.jpg"
-                                    alt="Pokemon Center Perú Logo"
+                                    alt="Poke Store Logo"
                                     fill
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand-red transition-colors">POKEMON CENTER PERÚ</span>
+                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand-red transition-colors">POKE STORE</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu destino definitivo para Pokémon TCG. Coleccionables, cajas y cartas sueltas para verdaderos entrenadores.
@@ -83,7 +83,7 @@ export default function Footer() {
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-xs">
-                        &copy; {new Date().getFullYear()} Pokemon Center Perú. Todos los derechos reservados.
+                        &copy; {new Date().getFullYear()} Poke Store. Todos los derechos reservados.
                     </p>
                     <p className="text-gray-600 text-xs">
                         No afiliado con Nintendo o The Pokémon Company.
