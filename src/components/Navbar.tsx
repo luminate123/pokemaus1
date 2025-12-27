@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-24 gap-8">
             {/* Logo */}
             <Link href="/" className="shrink-0 flex items-center gap-3 group">
-              <div className="relative w-16 h-16 overflow-hidden rounded-full border-2 border-gray-100 shadow-sm">
+              <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden rounded-full border-2 border-gray-100 shadow-sm">
                 <Image 
                   src="/logo.jpg" 
                   alt="Pokemon Center Perú Logo" 

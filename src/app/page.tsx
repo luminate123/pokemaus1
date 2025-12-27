@@ -30,7 +30,7 @@ export default function Home() {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight drop-shadow-sm">
+          <h1 className="text-4xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight drop-shadow-sm">
             REALIZAMOS ENVÍOS
             <span className="block text-brand-yellow text-stroke-red drop-shadow-md mt-2">EL MISMO DÍA</span>
           </h1>
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="h-px flex-1 bg-gray-200"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {featuredProducts.slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -87,7 +87,7 @@ export default function Home() {
             <div className="h-px flex-1 bg-gray-200"></div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {featuredProducts.slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

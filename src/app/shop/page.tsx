@@ -16,6 +16,7 @@ function ShopContent() {
   const [searchQuery, setSearchQuery] = useState<string>(searchParam || '');
   const [priceRange, setPriceRange] = useState<string>('all');
   const [activeExpansion, setActiveExpansion] = useState<string>('all');
+  const [showFilters, setShowFilters] = useState(false);
 
   // Extract unique expansions
   const expansions = ['all', ...Array.from(new Set(products.map(p => p.expansion).filter(Boolean)))];
@@ -88,8 +89,17 @@ function ShopContent() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
+          {/* Mobile Filter Toggle */}
+          <button 
+            className="lg:hidden w-full flex items-center justify-center gap-2 bg-gray-100 p-3 rounded-lg font-bold text-gray-900 mb-4"
+            onClick={() => setShowFilters(!showFilters)}
+          >
+            <Filter size={20} />
+            {showFilters ? 'Ocultar Filtros' : 'Mostrar Filtros'}
+          </button>
+
           {/* Sidebar Filters */}
-          <div className="w-full lg:w-64 shrink-0">
+          <div className={`w-full lg:w-64 shrink-0 ${showFilters ? 'block' : 'hidden lg:block'}`}>
             <div className="sticky top-24 space-y-8">
               <div className="flex items-center justify-between">
                 <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
@@ -158,7 +168,7 @@ function ShopContent() {
           {/* Product Grid */}
           <div className="flex-1">
             {filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {filteredProducts.map(product => (
                   <ProductCard key={product.id} product={product} />
                 ))}
