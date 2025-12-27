@@ -59,4 +59,9 @@ body {
   .holo-effect:hover::before {
     left: 125%;
   }
+
+  .text-stroke-red {
+    -webkit-text-stroke: 2px var(--brand-red);
+    text-stroke: 2px var(--brand-red);
+  }
 }

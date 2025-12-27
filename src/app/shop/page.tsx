@@ -71,14 +71,6 @@ function ShopContent() {
 
   const hasActiveFilters = activeCategory !== 'all' || searchQuery !== '' || priceRange !== 'all' || activeExpansion !== 'all';
 
-  const categories = [
-    { id: 'all', name: 'Todos los Productos' },
-    { id: 'box', name: 'Cajas' },
-    { id: 'combo', name: 'Combos' },
-    { id: 'mystery-box', name: 'Mystery Boxes' },
-    { id: 'single', name: 'Cartas Individuales' },
-  ];
-
   const priceRanges = [
     { id: 'all', name: 'Todos los Precios' },
     { id: 'under-50', name: 'Menos de S/. 50' },
@@ -90,7 +82,9 @@ function ShopContent() {
     <div className="bg-white min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900">Tienda</h1>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900">
+            {activeCategory === 'all' ? 'Todos los Productos' : activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
+          </h1>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
@@ -98,111 +92,66 @@ function ShopContent() {
           <div className="w-full lg:w-64 shrink-0">
             <div className="sticky top-24 space-y-8">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-gray-900 font-medium">
-                  <Filter size={18} />
-                  <h2>Filtros</h2>
-                </div>
+                <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                  <Filter size={20} /> Filtros
+                </h2>
                 {hasActiveFilters && (
                   <button 
                     onClick={clearFilters}
-                    className="text-xs text-gray-500 hover:text-black underline flex items-center gap-1"
+                    className="text-sm text-brand-red hover:text-red-700 font-medium"
                   >
-                    <X size={12} /> Limpiar
+                    Limpiar
                   </button>
                 )}
               </div>
 
-              {/* Search */}
+              {/* Price Filter */}
               <div>
-                <input
-                  type="text"
-                  placeholder="Buscar productos..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-0 py-2 border-b border-gray-200 text-sm focus:outline-none focus:border-black bg-transparent placeholder-gray-400"
-                />
-              </div>
-              
-              {/* Categories Accordion */}
-              <details className="group" open>
-                <summary className="flex items-center justify-between cursor-pointer list-none mb-4">
-                  <h3 className="text-xs font-medium text-gray-900 uppercase tracking-widest">Categorías</h3>
-                  <ChevronDown size={14} className="text-gray-400 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="space-y-2 pl-1">
-                  {categories.map(cat => (
-                    <label key={cat.id} className="flex items-center gap-3 cursor-pointer group/item">
-                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
-                        activeCategory === cat.id ? 'border-black' : 'border-gray-300 group-hover/item:border-gray-400'
-                      }`}>
-                        {activeCategory === cat.id && <div className="w-2 h-2 rounded-full bg-black" />}
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Precio</h3>
+                <div className="space-y-2">
+                  {priceRanges.map((range) => (
+                    <label key={range.id} className="flex items-center gap-3 cursor-pointer group">
+                      <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${priceRange === range.id ? 'bg-brand-red border-brand-red' : 'border-gray-300 group-hover:border-brand-red'}`}>
+                        {priceRange === range.id && <div className="w-2 h-2 bg-white rounded-full" />}
                       </div>
-                      <button
-                        onClick={() => setActiveCategory(cat.id)}
-                        className={`text-sm text-left ${
-                          activeCategory === cat.id ? 'text-black font-medium' : 'text-gray-500 group-hover/item:text-gray-700'
-                        }`}
-                      >
-                        {cat.name}
-                      </button>
-                    </label>
-                  ))}
-                </div>
-              </details>
-
-              {/* Price Accordion */}
-              <details className="group" open>
-                <summary className="flex items-center justify-between cursor-pointer list-none mb-4">
-                  <h3 className="text-xs font-medium text-gray-900 uppercase tracking-widest">Precio</h3>
-                  <ChevronDown size={14} className="text-gray-400 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="space-y-2 pl-1">
-                  {priceRanges.map(range => (
-                    <label key={range.id} className="flex items-center gap-3 cursor-pointer group/item">
-                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
-                        priceRange === range.id ? 'border-black' : 'border-gray-300 group-hover/item:border-gray-400'
-                      }`}>
-                        {priceRange === range.id && <div className="w-2 h-2 rounded-full bg-black" />}
-                      </div>
-                      <button
-                        onClick={() => setPriceRange(range.id)}
-                        className={`text-sm text-left ${
-                          priceRange === range.id ? 'text-black font-medium' : 'text-gray-500 group-hover/item:text-gray-700'
-                        }`}
-                      >
+                      <input 
+                        type="radio" 
+                        name="price" 
+                        className="hidden"
+                        checked={priceRange === range.id}
+                        onChange={() => setPriceRange(range.id)}
+                      />
+                      <span className={`text-sm ${priceRange === range.id ? 'text-gray-900 font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
                         {range.name}
-                      </button>
+                      </span>
                     </label>
                   ))}
                 </div>
-              </details>
+              </div>
 
-              {/* Expansion Accordion */}
-              <details className="group" open>
-                <summary className="flex items-center justify-between cursor-pointer list-none mb-4">
-                  <h3 className="text-xs font-medium text-gray-900 uppercase tracking-widest">Expansión</h3>
-                  <ChevronDown size={14} className="text-gray-400 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="space-y-2 pl-1">
-                  {expansions.map(exp => (
-                    <label key={exp as string} className="flex items-center gap-3 cursor-pointer group/item">
-                      <div className={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
-                        activeExpansion === exp ? 'border-black' : 'border-gray-300 group-hover/item:border-gray-400'
-                      }`}>
-                        {activeExpansion === exp && <div className="w-2 h-2 rounded-full bg-black" />}
+              {/* Expansion Filter */}
+              <div>
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-4">Expansión / Tipo</h3>
+                <div className="space-y-2">
+                  {expansions.map((expansion) => (
+                    <label key={expansion as string} className="flex items-center gap-3 cursor-pointer group">
+                      <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${activeExpansion === expansion ? 'bg-brand-red border-brand-red' : 'border-gray-300 group-hover:border-brand-red'}`}>
+                        {activeExpansion === expansion && <div className="w-2 h-2 bg-white rounded-full" />}
                       </div>
-                      <button
-                        onClick={() => setActiveExpansion(exp as string)}
-                        className={`text-sm text-left ${
-                          activeExpansion === exp ? 'text-black font-medium' : 'text-gray-500 group-hover/item:text-gray-700'
-                        }`}
-                      >
-                        {exp === 'all' ? 'Todas las Expansiones' : exp}
-                      </button>
+                      <input 
+                        type="radio" 
+                        name="expansion" 
+                        className="hidden"
+                        checked={activeExpansion === expansion}
+                        onChange={() => setActiveExpansion(expansion as string)}
+                      />
+                      <span className={`text-sm ${activeExpansion === expansion ? 'text-gray-900 font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                        {expansion === 'all' ? 'Todas' : expansion}
+                      </span>
                     </label>
                   ))}
                 </div>
-              </details>
+              </div>
             </div>
           </div>
 

@@ -9,102 +9,103 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[80vh] flex items-center justify-center">
-        {/* Background Image with Blur */}
+      <section className="relative overflow-hidden min-h-[600px] flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/Hero.png"
             alt="Hero Background"
             fill
-            className="object-cover scale-110"
+            className="object-cover opacity-80"
             priority
           />
-          <div className="absolute inset-0 bg-white/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
         </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+          <div className="inline-block mb-6 animate-bounce">
+            <span className="bg-brand-red text-white px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm shadow-lg">
+              ¡Bienvenidos a Pokemon Center Perú!
+            </span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-4 tracking-tight drop-shadow-sm">
+            REALIZAMOS ENVÍOS
+            <span className="block text-brand-yellow text-stroke-red drop-shadow-md mt-2">EL MISMO DÍA</span>
+          </h1>
+          
+          <div className="bg-brand-red text-white inline-block px-8 py-3 rounded-full font-black text-xl uppercase tracking-wider shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-300 mb-12">
+            Exclusivo para Lima y Callao
+          </div>
+
+          {/* Partners Logos */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl max-w-4xl mx-auto border border-gray-100">
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+              {/* Placeholder for partner logos - using text for now as I don't have the SVGs */}
+              <span className="font-bold text-xl text-gray-400">Mercado Libre</span>
+              <span className="font-bold text-xl text-gray-400">Rappi</span>
+              <span className="font-bold text-xl text-gray-400">Shopstar</span>
+              <span className="font-bold text-xl text-gray-400">Ripley</span>
+              <span className="font-bold text-xl text-gray-400">Falabella</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Arrows (Visual only for now) */}
+        <button className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg text-gray-800 transition-all hover:scale-110 hidden md:block">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg text-gray-800 transition-all hover:scale-110 hidden md:block">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-24 bg-white">
+      {/* Preventas Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/shop?category=box" className="group block">
-              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
-                <Image 
-                  src="https://tcgplayer-cdn.tcgplayer.com/product/501257_in_1000x1000.jpg" 
-                  alt="Cajas" 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-lg font-medium text-gray-900">Cajas</h3>
-              <p className="text-sm text-gray-500 mt-1">Explora nuestra colección</p>
-            </Link>
-            <Link href="/shop?category=combo" className="group block">
-              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
-                <Image 
-                  src="https://tcgplayer-cdn.tcgplayer.com/product/516576_in_1000x1000.jpg" 
-                  alt="Combos" 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-lg font-medium text-gray-900">Combos</h3>
-              <p className="text-sm text-gray-500 mt-1">Los mejores paquetes</p>
-            </Link>
-            <Link href="/shop?category=mystery-box" className="group block">
-              <div className="relative aspect-4/3 overflow-hidden bg-gray-100 mb-4">
-                <Image 
-                  src="https://www.pokeperustore.pe/wp-content/uploads/2023/08/1838.jpg" 
-                  alt="Cajas Misteriosas" 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <h3 className="text-lg font-medium text-gray-900">Cajas Misteriosas</h3>
-              <p className="text-sm text-gray-500 mt-1">Descubre lo inesperado</p>
-            </Link>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px flex-1 bg-gray-200"></div>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">PREVENTAS EN POKEMON CENTER PERÚ</h2>
+            <div className="h-px flex-1 bg-gray-200"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.slice(0, 4).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Sell Your Cards Section */}
-      <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
-        {/* Decorative Pokeball Background */}
-        <div className="absolute -right-20 -top-20 opacity-10 pointer-events-none">
-          <svg width="400" height="400" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="white" stroke="white" strokeWidth="2"/>
-            <path d="M 5,50 A 45,45 0 0,1 95,50" fill="white" stroke="none"/>
-            <path d="M 5,50 L 95,50" stroke="white" strokeWidth="5"/>
-            <circle cx="50" cy="50" r="15" fill="transparent" stroke="white" strokeWidth="5"/>
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-brand-yellow font-bold tracking-widest uppercase text-xs mb-2 block">¡Te compramos tus cartas!</span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">¿Tienes cartas para vender?</h2>
-          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto font-light">
-            Compramos tus colecciones y cartas individuales. Obtén una cotización rápida y justa por tus tesoros Pokémon.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center justify-center px-10 py-4 text-sm font-bold uppercase tracking-widest text-black bg-brand-yellow hover:bg-yellow-400 transition-colors shadow-lg hover:shadow-yellow-400/20"
-          >
-            Vender mis cartas
-          </Link>
+      {/* Promos Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px flex-1 bg-gray-200"></div>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">POKE PROMOS PARA TÍ</h2>
+            <div className="h-px flex-1 bg-gray-200"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.slice(0, 4).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      {/* Novedades Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Destacados</h2>
-            <Link href="/shop" className="text-sm font-medium text-gray-500 hover:text-black transition-colors border-b border-transparent hover:border-black pb-0.5">
-              Ver todos
-            </Link>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px flex-1 bg-gray-200"></div>
+            <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">NOVEDADES EN POKEMON CENTER PERÚ</h2>
+            <div className="h-px flex-1 bg-gray-200"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            {featuredProducts.map(product => (
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>

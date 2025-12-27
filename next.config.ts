@@ -24,6 +24,27 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "production-tailoy-repo-magento-statics.s3.amazonaws.com",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "rimage.ripley.com.pe",
+      },
+      {
+        protocol: "https",
+        hostname: "http2.mlstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "encrypted-tbn0.gstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+      }
+
     ],
   },
 };

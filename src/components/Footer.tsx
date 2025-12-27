@@ -28,12 +28,12 @@ export default function Footer() {
                             <div className="relative w-10 h-10 overflow-hidden rounded-full border-2 border-white/20 group-hover:border-brand-red transition-colors">
                                 <Image
                                     src="/logo.jpg"
-                                    alt="POKEMAUS Logo"
+                                    alt="Pokemon Center Perú Logo"
                                     fill
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand-red transition-colors">POKEMAUS</span>
+                            <span className="text-xl font-bold tracking-tight text-white group-hover:text-brand-red transition-colors">POKEMON CENTER PERÚ</span>
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
                             Tu destino definitivo para Pokémon TCG. Coleccionables, cajas y cartas sueltas para verdaderos entrenadores.
@@ -41,20 +41,24 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Tienda</h3>
+                        <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Categorias de Productos</h3>
                         <ul className="space-y-4">
-                            <li><Link href="/shop?category=box" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Cajas</Link></li>
-                            <li><Link href="/shop?category=combo" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Combos</Link></li>
-                            <li><Link href="/shop?category=mystery-box" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Mystery Boxes</Link></li>
-                            <li><Link href="/shop" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Todos los Productos</Link></li>
+                            <li><Link href="/shop?category=figuras" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Figuras de colección</Link></li>
+                            <li><Link href="/shop?category=tcg" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Poke TCG</Link></li>
+                            <li><Link href="/shop?category=ropa" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Ropa Pokémon</Link></li>
+                            <li><Link href="/shop?category=videojuegos" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Videojuegos</Link></li>
+                            <li><Link href="/shop?category=promos" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Poke Promos</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Soporte</h3>
+                        <h3 className="text-xs font-bold text-brand-yellow uppercase tracking-widest mb-6">Servicio al cliente</h3>
                         <ul className="space-y-4">
-                            <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Contáctanos</Link></li>
-                            <li><Link href="/about" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Sobre Nosotros</Link></li>
+                            <li><Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Políticas de privacidad</Link></li>
+                            <li><Link href="/blog" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Blog Maestro Pokémon</Link></li>
+                            <li><Link href="/contact" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Contactanos</Link></li>
+                            <li><Link href="/faq" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Terminos y condiciones</Link></li>
+                            <li><Link href="/my-account" className="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 hover:translate-x-1 duration-300">Mi Cuenta</Link></li>
                         </ul>
                     </div>
 
@@ -88,7 +92,7 @@ export default function Footer() {
 
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-xs">
-                        &copy; {new Date().getFullYear()} POKEMAUS. Todos los derechos reservados.
+                        &copy; {new Date().getFullYear()} Pokemon Center Perú. Todos los derechos reservados.
                     </p>
                     <p className="text-gray-600 text-xs">
                         No afiliado con Nintendo o The Pokémon Company.
